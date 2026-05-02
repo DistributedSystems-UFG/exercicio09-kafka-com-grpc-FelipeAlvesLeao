@@ -1,0 +1,10 @@
+message Empty {}
+
+message EarthquakeResponse {
+    double magnitude = 1;
+    string location = 2;
+}
+
+service EarthquakeService {
+    rpc GetLatestEarthquake(Empty) returns (EarthquakeResponse);
+}
